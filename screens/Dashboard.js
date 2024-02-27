@@ -1,30 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import { View, ScrollView, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions, Image, Modal, Button } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Button, Text, View } from 'react-native';
+import * as AuthSession from 'expo-auth-session';
 
 const Dashboard = () => {
-  // State variables go here
-  const [stateVariable, setStateVariable] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState(null);
 
-  // UseEffect for lifecycle methods
-  useEffect(() => {
-    // Code to run on component mount
-  }, []);
+  const login = async () => {
+    const result = await AuthSession.startAsync({
+      authUrl: 'https://your-authentication-api.com/login',
+    });
+
+    if (result.type === 'success') {
+      setToken(result.params.token);
+      setIsLoggedIn(true);
+    }
+  };
+
+  const logout = async () => {
+    const result = await AuthSession.startAsync({
+      authUrl: 'https://your-authentication-api.com/logout', 
+    });
+
+    if (result.type === 'success') {
+      setToken(null);
+      setIsLoggedIn(false);
+    }
+  };
 
   return (
-    <View style={styles.container}>
-      <Text>Dashboard</Text>
-      {/* Other components go here */}
+    <View>
+      {isLoggedIn ? (
+        <>
+          <Text>You are logged in.</Text>
+          <Button title="Logout" onPress={logout} />
+        </>
+      ) : (
+        <Button title="Login" onPress={login} />
+      )}
     </View>
   );
 };
-
-// Stylesheet
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default Dashboard;
