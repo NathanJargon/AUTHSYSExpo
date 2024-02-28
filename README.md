@@ -41,6 +41,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Your Name - your@email.com
+Your Name - bondoc.nash123@email.com
 
 Project Link: https://github.com/NathanJargon/AUTHSYSExpo
