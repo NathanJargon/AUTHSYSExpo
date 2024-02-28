@@ -1,5 +1,5 @@
 {
-  "name": "sqlexpo",
+  "name": "authsysexpo",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -11,9 +11,15 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/stack": "^6.3.23",
+    "@unimodules/core": "^7.1.2",
+    "@unimodules/react-native-adapter": "^6.3.9",
     "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
     "expo": "~50.0.8",
+    "expo-auth-session": "~5.4.0",
+    "expo-constants": "^15.4.5",
     "expo-image-picker": "^14.7.1",
+    "expo-random": "^13.6.0",
     "expo-sqlite": "^13.2.2",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
