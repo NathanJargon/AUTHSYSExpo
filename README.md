@@ -1,10 +1,11 @@
 # 🚀 AUTHSYSExpo
 
-<p align="center">
-  <img src="./assets/screenshot.jpg" alt="Screenshot of the app">
-</p>
-
-This is a simple authentication system built with Expo and Google Cloud. It uses the `expo-auth-session` package for OAuth flows and Google Cloud for user authentication.
+<table style="border: none; border-collapse: collapse;">
+  <tr>
+    <td valign="top" style="border: none;"><p>This is a simple authentication system built with Expo and Google Cloud. It uses the `expo-auth-session` package for OAuth flows and Google Cloud for user authentication.</p></td>
+    <td align="center" style="border: none;"><img src="./assets/screenshot.jpg" alt="Screenshot of the app" width="500"></td>
+  </tr>
+</table>
 
 ## 📋 Prerequisites
 
